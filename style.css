@@ -1,0 +1,149 @@
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #f6f7f8, rgb(226, 228, 229));
+    /*background-image: url(headerimage.png);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: maroon;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .btn-custom {
+    background-color: #ff8c42;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .btn-custom:hover {
+    background-color: #e07a2e;
+    transform: scale(1.05);
+  }
+
+  .features {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+
+  .about-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #a5c9ed, #0179f1);
+  }
+
+  .about-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+
+  .about-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .about-icon {
+    font-size: 4rem;
+    color: #6a11cb;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    background: linear-gradient(135deg, #ff8c42, #e0d72e);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .info-card {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    text-align: left;
+    max-width: 900px;
+  }
+
+  .info-card p {
+    font-size: 1.15rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  /* contact form */
+
+  
+  .form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
