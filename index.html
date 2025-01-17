@@ -173,9 +173,31 @@
     <!-- Custom JS -->
     <script>
       $(document).ready(function () {
-        $("#waitlist-form").on("submit", function (e) {
-          e.preventDefault();
-          alert("Thank you for signing up!");
+  		  $("#waitlist-form").on("submit", function (e) {
+  			  e.preventDefault();
+  			
+  			  // Gather the form data
+  			  var formData = $(this).serializeArray();
+  			  var jsonData = {};
+  			
+  			  // Convert form data to JSON object
+  			  $.each(formData, function () {
+  			    jsonData[this.name] = this.value;
+  			  });
+  
+  			  // Send the form data as a JSON object to the webhook endpoint
+  			  $.ajax({
+  			    url: 'https://hook.us2.make.com/31qneynip2e6wf9ajoqiz7ugxk2c6gic', // Replace with your webhook URL
+  			    type: 'POST',
+  			    contentType: 'application/json',
+  			    data: JSON.stringify(jsonData),
+  			    success: function (response) {
+  				    alert("Thank you for signing up!");
+  			    },
+  			    error: function (xhr, status, error) {
+              alert("There was an error submitting your form. Please try again.");
+            }
+          });
         });
       });
     </script>
