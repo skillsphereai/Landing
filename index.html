@@ -195,6 +195,26 @@
             name: $("#name").val(),
             email: $("#email").val(),
           };
+          var name = $("#name").val()
+          var email = $("#email").val()
+         // Validate name (no special characters, max 32 characters)
+          var nameRegex = /^[A-Za-z\s]+$/; // Only letters and spaces allowed
+          if (name.length > 32) {
+            alert("Name should not exceed 32 characters.");
+            return; // Stop form submission
+          }
+          if (!nameRegex.test(name)) {
+            alert("Name should only contain letters and spaces.");
+            return; // Stop form submission
+          }
+
+          // Validate email (proper email format)
+          var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop form submission
+          }
+
 
           // API URL and request options
           const apiUrl = 'https://hook.us2.make.com/31qneynip2e6wf9ajoqiz7ugxk2c6gic';
