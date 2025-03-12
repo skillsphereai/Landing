@@ -16,7 +16,7 @@
   }
 
   .hero {
-    background: linear-gradient(135deg, #ebeef0, rgb(226, 228, 229));
+    background-color:#ffffff;
     /*background-image: url(headerimage.png);*/
     background-repeat: no-repeat;
     background-position: center center;
